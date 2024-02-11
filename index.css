@@ -1,0 +1,115 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+footer {
+  background: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  gap: 10px;
+  padding: 10px;
+}
+.copy {
+  text-align: center;
+}
+.footer_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+.footer_row .footer_usefullink {
+  text-align: center;
+}
+img {
+  height: 80px;
+}
+.footer_row h2 {
+  margin-bottom: 1.1rem;
+  text-transform: capitalize;
+  position: relative;
+}
+h2::after {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 50%;
+  position: absolute;
+  background: red;
+  left: 0;
+  top: 2rem;
+}
+.footer_row ul {
+  list-style: none;
+}
+.footer_row a{
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+.footer_row li {
+  line-height: 180%;
+}
+.content {
+  color: black;
+  font-size: 4rem;
+}
+#email {
+  padding: 6px 8px;
+  border: none;
+  border-radius: 2px;
+}
+#email::placeholder {
+  font-size: 0.8rem;
+  text-transform: lowercase;
+}
+#email:focus {
+  border: none;
+  outline: none;
+}
+.social_link {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+}
+.social_link i {
+  height: 25px;
+  width: 25px;
+  background: red;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(0px);
+  cursor: pointer;
+}
+.social_link i:hover {
+  transform: translateY(5px);
+}
+
+/* Footer for small screen  */
+@media screen and (max-width: 768px) {
+  .footer_row {
+    flex-wrap: wrap;
+    padding: 10px 30px;
+  }
+  .footer_usefullink, .footer_menu, .footer_contact {
+    margin: 10px;
+  }
+ .footer_row .footer_usefullink {
+    text-align: left;
+  }
+}
